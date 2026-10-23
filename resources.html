@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resources | Dr. Jeane Bosch</title>
+<meta name="description" content="Publications, evidence-based mobile apps, and mental health support tools for trauma survivors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sand:#F4F2EE;--pri:#1F5F59;--sec:#3E7D73;--acc:#A7C1B5;--ink:#2E2E2E;--neu:#D9D2C3;--deep:#0A1A17;
+--ease:cubic-bezier(.23,1,.32,1);--serif:'Fraunces',Georgia,serif;--sans:'Open Sans',system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--sand);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.2;letter-spacing:-.01em;margin:0 0 .6em;text-wrap:balance}
+h1{font-size:clamp(2.3rem,5vw,3.6rem)}h2{font-size:clamp(1.8rem,3.4vw,2.5rem)}h3{font-size:1.25rem}
+p{margin:0 0 1em;text-wrap:pretty}a{color:var(--pri)}
+.w{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding:clamp(3.2rem,7vw,5.5rem) 0}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:6px}
+
+header{position:sticky;top:0;z-index:20;background:var(--sand);border-bottom:1px solid var(--neu)}
+header .w{display:flex;align-items:center;justify-content:space-between;min-height:72px;gap:1rem}
+.logo{font:500 1.2rem var(--serif);color:var(--pri);text-decoration:none}
+nav{display:flex;align-items:center;gap:2rem}
+nav a{color:var(--pri);text-decoration:none;font-weight:500;position:relative}
+nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--sec);transform:scaleX(0);transform-origin:left;transition:transform 240ms var(--ease)}
+nav a[aria-current]::after{transform:scaleX(1)}
+@media (hover:hover){nav a:not(.btn):hover::after{transform:scaleX(1)}}
+.btn{display:inline-block;border:1px solid var(--pri);background:var(--pri);color:#fff;border-radius:6px;padding:.7rem 1.3rem;font:600 1rem var(--sans);text-decoration:none;cursor:pointer;transition:transform 160ms var(--ease),box-shadow 200ms var(--ease),background 200ms var(--ease),color 200ms var(--ease)}
+nav .btn{background:transparent;color:var(--pri);padding:.6rem 1.1rem}
+@media (hover:hover){.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(31,95,89,.28)}nav .btn:hover{background:var(--pri);color:#fff}}
+.btn:active{transform:scale(.97);box-shadow:none}
+@media (max-width:900px){nav a:not(.btn){display:none}}
+
+.top{background:var(--pri);color:#fff;padding:clamp(3rem,7vw,5rem) 0}
+.top h1{margin:0 0 .4em}.top p{max-width:60ch;margin:0;color:rgba(255,255,255,.85);font-size:1.1rem}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.chips a{color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:99px;padding:.4rem 1rem;text-decoration:none;font-size:.95rem;transition:background 180ms var(--ease)}
+@media (hover:hover){.chips a:hover{background:rgba(255,255,255,.14)}}
+
+.lead{max-width:64ch;color:#4a4a47}
+
+.pub{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;background:#fff;border-radius:12px;padding:1.4rem 1.6rem;margin-top:1rem;box-shadow:0 1px 2px rgba(10,26,23,.06)}
+.pub .i{font-size:1.8rem;line-height:1.2}.pub p{margin:0 0 .4em}.pub small{color:#666;font-size:.93rem}.pub em{color:var(--sec);font-style:normal;font-weight:600}
+.on-req{margin-top:1.4rem;font-weight:600;color:var(--pri)}
+
+.white{background:#fff}
+.sub{margin:2.6rem 0 .3rem;font-size:1.35rem;color:var(--pri)}
+.apps{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:1.2rem}
+.app{display:grid;grid-template-columns:132px 1fr;gap:1.2rem;background:var(--sand);border-radius:14px;padding:1.3rem;align-items:start;transition:transform 240ms var(--ease),box-shadow 240ms var(--ease)}
+@media (hover:hover){.app:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(31,95,89,.14)}}
+.app img.p{width:132px;height:132px;object-fit:contain;border-radius:12px;background:#fff}
+.app h4{font-size:1.2rem;margin:0 0 .3rem}.app p{font-size:.95rem;margin:0 0 .8rem;color:#4a4a47}
+.stores{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.stores img{height:38px;display:block;transition:transform 160ms var(--ease)}
+.stores a:active img{transform:scale(.96)}
+.lnk{font-weight:600;font-size:.95rem}
+@media (max-width:860px){.apps{grid-template-columns:1fr}}@media (max-width:480px){.app{grid-template-columns:1fr}}
+
+.sage{background:var(--acc);color:var(--deep)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.4rem}
+.grp{background:rgba(255,255,255,.55);border-radius:12px;padding:1.6rem}
+.grp h3{margin-bottom:1rem}
+.link{display:block;text-decoration:none;color:var(--deep);padding:.85rem 0;border-top:1px solid rgba(10,26,23,.18);transition:padding 200ms var(--ease)}
+.link b{display:flex;justify-content:space-between;gap:1rem;color:var(--pri)}.link b::after{content:"↗";transition:transform 200ms var(--ease)}
+.link span{display:block;font-size:.92rem;margin-top:.15rem}
+@media (hover:hover){.link:hover b::after{transform:translate(3px,-3px)}}
+@media (max-width:860px){.cols{grid-template-columns:1fr}}
+
+.crisis{display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;background:#FFF6E5;border:1px solid #E8D3A8;border-left:6px solid #C9962B;border-radius:12px;padding:1.6rem}
+.crisis h2{font-size:1.6rem;margin:0 0 .3em}.crisis p{margin:0}
+.crisis .b{display:flex;gap:.7rem;flex-wrap:wrap}
+@media (max-width:760px){.crisis{grid-template-columns:1fr}}
+
+.cta{background:var(--sec);color:#fff;text-align:center}
+.cta h2{color:#fff}.cta .btn{background:#fff;color:var(--pri);border-color:#fff}
+footer{background:var(--ink);color:rgba(255,255,255,.8);padding:2.5rem 0;font-size:.95rem}
+footer .w{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}footer a{color:var(--acc)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="w">
+<a class="logo" href="index.html">Dr. Jeane Bosch</a>
+<nav aria-label="Main"><a href="index.html#about">About</a><a href="index.html#approach">My approach</a><a href="index.html#how">How it works</a><a href="index.html#rates">Rates and insurance</a><a href="index.html#faq">F.A.Q.</a><a href="resources.html" aria-current="page">Resources</a><a class="btn" href="index.html#contact">Get started</a></nav>
+</div></header>
+
+<main>
+<div class="top"><div class="w">
+<h1>Resources</h1>
+<p>Publications, free evidence-based apps, and trusted support tools for trauma, stress, and everyday emotional wellness.</p>
+<div class="chips"><a href="#publications">Publications</a><a href="#apps">Helpful apps</a><a href="#more">Additional resources</a><a href="#crisis">Crisis support</a></div>
+</div></div>
+
+<section id="publications"><div class="w">
+<h2>Publications and research</h2>
+<p class="lead">These works reflect my commitment to culturally responsive, evidence-based care, particularly in trauma, PTSD, and health equity.</p>
+<div class="pub"><div class="i">📄</div><div><p><strong>Bell, S. L., Bosch, J., Tang, J. (2024).</strong> COVID-19 and AAPI Healthcare Providers: The Importance of an Ecological Lens.</p><p><em>Trauma Psychology News (APA Division 56)</em></p><small>Explores systemic and racialized stressors experienced by AAPI healthcare professionals during the COVID-19 pandemic.</small></div></div>
+<div class="pub"><div class="i">📄</div><div><p><strong>Bosch, J., et al. (2020).</strong> PTSD Treatment Response and Quality of Life in Women with Childhood Abuse Histories.</p><p><em>Psychological Trauma: Theory, Research, Practice, and Policy</em></p><small>Examines the outcomes of evidence-based PTSD treatment in women with trauma histories.</small></div></div>
+<div class="pub"><div class="i">📄</div><div><p><strong>Bosch, J., et al. (2019).</strong> Adverse Childhood Experiences and Oral Health.</p><p><em>Journal of Interpersonal Violence</em></p><small>Highlights the connection between early trauma and long-term health outcomes.</small></div></div>
+<p class="on-req">Additional peer-reviewed publications are available upon request.</p>
+</div></section>
+
+<section id="apps" class="white"><div class="w">
+<h2>Helpful apps for therapy and wellness</h2>
+<p class="lead">Free, evidence-based mobile apps developed by the U.S. Department of Veterans Affairs National Center for PTSD. They can complement our work together, supporting you with trauma, stress, and day-to-day emotional regulation. <a href="https://www.ptsd.va.gov/appvid/mobile">See all VA apps</a>.</p>
+
+<h3 class="sub">Trauma-focused apps</h3>
+<p class="lead" style="margin:0">Designed to support clients in evidence-based trauma therapies.</p>
+<div class="apps">
+<div class="app"><img class="p" src="https://cdn.dorik.com/6949f5ed362c4400291e970d/images/cptcoach-ZiZjb.png" alt="" loading="lazy"><div><h4>CPT Coach</h4><p>Supports clients in Cognitive Processing Therapy (CPT), with practice assignments, symptom tracking, and education about trauma recovery.</p>
+<div class="stores"><a href="https://play.google.com/store/apps/details?id=gov.va.mentalhealth.ncptsd.cptcoach3&hl=en_US" aria-label="Get CPT Coach on Google Play"><img src="https://cdn.dorik.com/624c0f1f9f34ad00115b5b4c/6287310b7278ca001136531e/images/button-play_xm7l5ikd.svg" alt="Get it on Google Play"></a><a href="https://apps.apple.com/tt/app/cpt-coach/id1610072407" aria-label="Download CPT Coach on the App Store"><img src="https://cdn.dorik.com/624c0f1f9f34ad00115b5b4c/6287310b7278ca001136531e/images/button-app_j3xe5sh7.svg" alt="Download on the App Store"></a></div></div></div>
+<div class="app"><img class="p" src="https://cdn.dorik.com/6949f5ed362c4400291e970d/images/pecoach-JN7EG.png" alt="" loading="lazy"><div><h4>PE Coach</h4><p>For those in Prolonged Exposure Therapy (PE). Helps track progress, record exposures, and access session materials.</p>
+<div class="stores"><a href="https://apps.apple.com/app/id1281266434" aria-label="Download PE Coach on the App Store"><img src="https://cdn.dorik.com/624c0f1f9f34ad00115b5b4c/6287310b7278ca001136531e/images/button-app_j3xe5sh7.svg" alt="Download on the App Store"></a><a class="lnk" href="https://www.ptsd.va.gov/appvid/mobile">More about PE Coach</a></div></div></div>
+</div>
+
+<h3 class="sub">General wellness and support apps</h3>
+<p class="lead" style="margin:0">Helpful for mindfulness, sleep, and overall emotional well-being.</p>
+<div class="apps">
+<div class="app"><img class="p" src="https://cdn.dorik.com/6949f5ed362c4400291e970d/images/mindfullnesscoachplay-9B4vQ.png" alt="" loading="lazy"><div><h4>Mindfulness Coach</h4><p>Learn and practice mindfulness meditation to reduce stress, improve emotional balance, and cope with unpleasant thoughts and emotions.</p><a class="lnk" href="https://www.ptsd.va.gov/appvid/mobile">Learn more and download</a></div></div>
+<div class="app"><img class="p" src="https://cdn.dorik.com/6949f5ed362c4400291e970d/images/insmniacoach-kJLFv.png" alt="" loading="lazy"><div><h4>Insomnia Coach</h4><p>Based on Cognitive Behavioral Therapy for Insomnia (CBT-i), with a guided plan and tools to track and improve your sleep habits.</p><a class="lnk" href="https://www.ptsd.va.gov/appvid/mobile">Learn more and download</a></div></div>
+<div class="app"><img class="p" src="https://cdn.dorik.com/6949f5ed362c4400291e970d/images/mindfullnesscoachplay2-sr_VW.png" alt="" loading="lazy"><div><h4>WellWithin Coach <small style="font:400 .85rem var(--sans);color:#666">(for women)</small></h4><p>Designed for women, it supports mental health and common challenges like stress, depression, and trauma at every stage of life.</p><p style="margin:0;font-size:.9rem">Search “WellWithin Coach” in your app store.</p></div></div>
+</div>
+</div></section>
+
+<section id="more" class="sage"><div class="w">
+<h2>Additional resources</h2>
+<p class="lead" style="color:var(--deep)">You may also find the following helpful.</p>
+<div class="cols">
+<div class="grp"><h3>For trauma and PTSD support</h3>
+<a class="link" href="https://www.ptsd.va.gov"><b>National Center for PTSD: self-help tools</b><span>Education and free tools from the VA’s National Center for PTSD.</span></a>
+<a class="link" href="https://www.nami.org"><b>National Alliance on Mental Illness (NAMI): PTSD information</b><span>Symptoms, treatment, and stress reduction strategies, including how trauma and PTSD differ.</span></a>
+<a class="link" href="https://www.apa.org"><b>American Psychological Association (APA): PTSD treatment</b><span>An overview of evidence-based treatments for PTSD, with information for patients and families.</span></a></div>
+<div class="grp"><h3>General mental health and wellness tools</h3>
+<a class="link" href="https://www.psychologytools.com"><b>Psychology Tools: free worksheets and info</b><span>Free worksheets and guides on common mental health topics.</span></a>
+<a class="link" href="https://screening.mhanational.org"><b>Mental Health America: screening tools</b><span>Free, confidential online screening tools for a range of mental health conditions.</span></a></div>
+</div></div></section>
+
+<section id="crisis"><div class="w"><div class="crisis" role="note">
+<div><h2>988 Suicide &amp; Crisis Lifeline</h2><p>The national crisis line, available 24/7, for immediate support. Call or text 988. In immediate danger, call 911.</p></div>
+<div class="b"><a class="btn" href="tel:988">Call 988</a><a class="btn" href="sms:988">Text 988</a></div>
+</div></div></section>
+
+<section class="cta"><div class="w">
+<h2>Ready to take the next step?</h2>
+<p>Book a free 15-minute phone consultation to see if we’re a good fit.</p>
+<a class="btn" href="index.html#contact">Contact me</a>
+</div></section>
+</main>
+
+<footer><div class="w"><div>Dr. Jeane Bosch, Licensed Clinical Psychologist (PSY30821). Telehealth for adults in California.</div><a href="index.html">Back to home</a></div></footer>
+</body>
+</html>
