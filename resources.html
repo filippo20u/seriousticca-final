@@ -86,8 +86,22 @@ nav .btn{background:transparent;color:var(--pri);padding:.6rem 1.1rem}
 .cta h2{color:#fff}.cta .btn{background:#fff;color:var(--pri);border-color:#fff}
 footer{background:var(--ink);color:rgba(255,255,255,.8);padding:2.5rem 0;font-size:.95rem}
 footer .w{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}footer a{color:var(--acc)}
+
+/* --- movimento discreto --- */
+@view-transition{navigation:auto}
+header{view-transition-name:site-header;transition:box-shadow 240ms var(--ease)}
+header.scrolled{box-shadow:0 8px 24px rgba(10,26,23,.09)}
+section,.top{position:relative}
+.wave{position:absolute;left:0;right:0;bottom:-1px;height:clamp(26px,3.6vw,44px);overflow:hidden;pointer-events:none;line-height:0;z-index:1}
+.wave svg{display:block;width:200%;height:100%;fill:var(--c);animation:drift 70s linear infinite}
+@keyframes drift{to{transform:translateX(-50%)}}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity 700ms var(--ease),transform 700ms var(--ease);transition-delay:var(--d,0ms)}
+.js .rv.on{opacity:1;transform:none}
+nav a.active::after{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){@view-transition{navigation:none}.wave svg{animation:none}.js .rv{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <header><div class="w">
@@ -101,7 +115,7 @@ footer .w{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}f
 <h1>Resources</h1>
 <p>Publications, free evidence-based apps, and trusted support tools for trauma, stress, and everyday emotional wellness.</p>
 <div class="chips"><a href="#publications">Publications</a><a href="#apps">Helpful apps</a><a href="#more">Additional resources</a><a href="#crisis">Crisis support</a></div>
-</div></div>
+</div><div class="wave" style="--c:#F4F2EE" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></div>
 
 <section id="publications"><div class="w">
 <h2>Publications and research</h2>
@@ -110,7 +124,7 @@ footer .w{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}f
 <div class="pub"><div class="i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div><div><p><strong>Bosch, J., et al. (2020).</strong> PTSD Treatment Response and Quality of Life in Women with Childhood Abuse Histories.</p><p><em>Psychological Trauma: Theory, Research, Practice, and Policy</em></p><small>Examines the outcomes of evidence-based PTSD treatment in women with trauma histories.</small></div></div>
 <div class="pub"><div class="i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 00-2 2v14a2 2 0 002 2h10a2 2 0 002-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div><div><p><strong>Bosch, J., et al. (2019).</strong> Adverse Childhood Experiences and Oral Health.</p><p><em>Journal of Interpersonal Violence</em></p><small>Highlights the connection between early trauma and long-term health outcomes.</small></div></div>
 <p class="on-req">Additional peer-reviewed publications are available upon request.</p>
-</div></section>
+</div><div class="wave" style="--c:#FFFFFF" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 
 <section id="apps" class="white"><div class="w">
 <h2>Helpful apps for therapy and wellness</h2>
@@ -132,7 +146,7 @@ footer .w{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}f
 <div class="app"><img class="p" src="assets/app-insomnia-coach.png" onerror="this.onerror=null;this.src='https://cdn.dorik.com/6949f5ed362c4400291e970d/images/insmniacoach-kJLFv.png'" alt="" loading="lazy"><div><h4>Insomnia Coach</h4><p>Based on Cognitive Behavioral Therapy for Insomnia (CBT-i), with a guided plan and tools to track and improve your sleep habits.</p><a class="lnk" href="https://www.ptsd.va.gov/appvid/mobile">Learn more and download</a></div></div>
 <div class="app"><img class="p" src="assets/app-wellwithin-coach.png" onerror="this.onerror=null;this.src='https://cdn.dorik.com/6949f5ed362c4400291e970d/images/mindfullnesscoachplay2-sr_VW.png'" alt="" loading="lazy"><div><h4>WellWithin Coach <small style="font:400 .85rem var(--sans);color:#666">(for women)</small></h4><p>Designed for women, it supports mental health and common challenges like stress, depression, and trauma at every stage of life.</p><p style="margin:0;font-size:.9rem">Search “WellWithin Coach” in your app store.</p></div></div>
 </div>
-</div></section>
+</div><div class="wave" style="--c:#A7C1B5" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 
 <section id="more" class="sage"><div class="w">
 <h2>Additional resources</h2>
@@ -145,18 +159,18 @@ footer .w{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}f
 <div class="grp"><h3>General mental health and wellness tools</h3>
 <a class="link" href="https://www.psychologytools.com"><b>Psychology Tools: free worksheets and info</b><span>Free worksheets and guides on common mental health topics.</span></a>
 <a class="link" href="https://screening.mhanational.org"><b>Mental Health America: screening tools</b><span>Free, confidential online screening tools for a range of mental health conditions.</span></a></div>
-</div></div></section>
+</div></div><div class="wave" style="--c:#F4F2EE" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 
 <section id="crisis"><div class="w"><div class="crisis" role="note">
 <div><h2>988 Suicide &amp; Crisis Lifeline</h2><p>The national crisis line, available 24/7, for immediate support. Call or text 988. In immediate danger, call 911.</p></div>
 <div class="b"><a class="btn" href="tel:988">Call 988</a><a class="btn" href="sms:988">Text 988</a></div>
-</div></div></section>
+</div></div><div class="wave" style="--c:#3E7D73" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 
 <section class="cta"><div class="w">
 <h2>Ready to take the next step?</h2>
 <p>Book a free 15-minute phone consultation to see if we’re a good fit.</p>
 <a class="btn" href="index.html#contact">Contact me</a>
-</div></section>
+</div><div class="wave" style="--c:#2E2E2E" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 </main>
 
 <footer><div class="w"><div>Dr. Jeane Bosch, Licensed Clinical Psychologist (PSY30821). Telehealth for adults in California.</div><a href="index.html">Back to home</a></div></footer>
@@ -164,6 +178,17 @@ footer .w{display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}f
 var m=document.querySelector('.menu'),n=document.querySelector('nav');
 m.addEventListener('click',function(){var o=n.classList.toggle('open');m.setAttribute('aria-expanded',o);m.textContent=o?'✕':'☰'});
 n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');m.textContent='☰'}});
+(function(){
+var h=document.querySelector('header');
+function sc(){h.classList.toggle('scrolled',window.scrollY>8)}
+sc();window.addEventListener('scroll',sc,{passive:true});
+
+if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var els=[].slice.call(document.querySelectorAll(".top h1,.top p,.chips,section h2,section .lead,.pub,.app,.grp,.crisis,.cta .w > *")),cnt=new Map();
+els.forEach(function(el){var p=el.parentNode,i=cnt.get(p)||0;cnt.set(p,i+1);el.classList.add('rv');el.style.setProperty('--d',Math.min(i,5)*90+'ms')});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add('on');io.unobserve(el);setTimeout(function(){el.classList.remove('rv','on');el.style.removeProperty('--d')},1300)})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+els.forEach(function(el){io.observe(el)});
+})();
 </script>
 </body>
 </html>

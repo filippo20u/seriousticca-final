@@ -119,8 +119,22 @@ form .btn{justify-self:start}.disc{font-size:.85rem;color:#666;margin:0}
 footer{background:var(--ink);color:rgba(255,255,255,.8);padding:3rem 0;font-size:.95rem}
 footer .w{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
 footer b{display:block;color:#fff;font:500 1.1rem var(--serif);margin-bottom:.3rem}footer a{color:var(--acc)}
+
+/* --- movimento discreto --- */
+@view-transition{navigation:auto}
+header{view-transition-name:site-header;transition:box-shadow 240ms var(--ease)}
+header.scrolled{box-shadow:0 8px 24px rgba(10,26,23,.09)}
+section,.top{position:relative}
+.wave{position:absolute;left:0;right:0;bottom:-1px;height:clamp(26px,3.6vw,44px);overflow:hidden;pointer-events:none;line-height:0;z-index:1}
+.wave svg{display:block;width:200%;height:100%;fill:var(--c);animation:drift 70s linear infinite}
+@keyframes drift{to{transform:translateX(-50%)}}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity 700ms var(--ease),transform 700ms var(--ease);transition-delay:var(--d,0ms)}
+.js .rv.on{opacity:1;transform:none}
+nav a.active::after{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){@view-transition{navigation:none}.wave svg{animation:none}.js .rv{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
+<script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
 <header><div class="w">
@@ -137,7 +151,7 @@ footer b{display:block;color:#fff;font:500 1.1rem var(--serif);margin-bottom:.3r
 <h1>Culturally aware, evidence-based therapy tailored to your journey</h1>
 <p>Hello, I’m Dr. Jeane Bosch, a Licensed Clinical Psychologist based in San Diego, California (PSY30821).</p>
 <a class="btn" href="#contact">Book a free 15-minute call</a>
-</div></div></div></section>
+</div></div></div><div class="wave" style="--c:#F4F2EE" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 
 <section id="about"><div class="w two">
 <h2>My background</h2>
@@ -146,7 +160,7 @@ footer b{display:block;color:#fff;font:500 1.1rem var(--serif);margin-bottom:.3r
 <p>As a Filipino-American who has worked with people from diverse backgrounds, I deeply value the role of cultural identity in our emotional lives. I strive to create a space where all aspects of who you are, your race, gender, sexuality, or socioeconomic status, are acknowledged and respected.</p>
 <p>I earned my PhD in Clinical Psychology from Saint Louis University and a Master of Public Health from San Francisco State University. My clinical work has included trauma-focused care in several settings, including the VA healthcare system.</p>
 <p>Whether you’re navigating painful past experiences, daily stress, or simply feeling stuck, my goal is to provide a safe, inclusive space where you feel seen and supported as you grow.</p>
-</div></div></section>
+</div></div><div class="wave" style="--c:#1F5F59" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 
 <section id="approach" class="green"><div class="w">
 <h2>My approach</h2>
@@ -158,7 +172,7 @@ footer b{display:block;color:#fff;font:500 1.1rem var(--serif);margin-bottom:.3r
 <div><h3>Problem Solving Therapy (PST)</h3><p>An action-oriented approach that builds skills to manage stressors and face obstacles with more clarity.</p></div>
 <div><h3>Prolonged Exposure (PE)</h3><p>A highly effective PTSD treatment where you safely approach trauma-related memories and situations you have been avoiding.</p></div>
 <div><h3>Mindfulness and strengths-based practice</h3><p>Staying grounded in the present and connected to your resilience as you heal and grow.</p></div>
-</div></div></section>
+</div></div><div class="wave" style="--c:#F4F2EE" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 
 <section id="how"><div class="w">
 <h2>How it works</h2>
@@ -168,7 +182,7 @@ footer b{display:block;color:#fff;font:500 1.1rem var(--serif);margin-bottom:.3r
 <div><div class="e" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.5 7.2L4 20l1.2-4.3A8 8 0 1121 12z"/></svg></div><h3>Initial intake session (60 minutes)</h3><p>We get to know your history, current concerns, and goals for therapy.</p></div>
 <div><div class="e" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><h3>Ongoing sessions (50 minutes)</h3><p>Weekly or every other week by secure telehealth, at a pace that fits you.</p></div>
 <div><div class="e" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.8 6 5.5"/></svg></div><h3>Collaborative, personalized care</h3><p>I tailor each session to your goals, and we check in regularly to stay aligned.</p></div>
-</div></div></section>
+</div></div><div class="wave" style="--c:#A7C1B5" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 
 <section id="rates" class="sage"><div class="w">
 <h2>Rates and insurance</h2>
@@ -178,7 +192,7 @@ footer b{display:block;color:#fff;font:500 1.1rem var(--serif);margin-bottom:.3r
 <div class="price"><span>Prolonged Exposure (PE)<small>90 minutes. Longer sessions leave room for focused trauma work.</small></span><b>$350</b></div></div>
 <div class="box"><h3>Insurance</h3><p>I am not currently accepting insurance. I can provide a <strong>superbill</strong> on request, which you may submit to your insurer for possible <strong>out-of-network reimbursement</strong>.</p><small>Please contact your insurer to learn about your coverage.</small></div>
 <div class="box"><h3>Sliding scale</h3><p>I reserve a limited number of sliding scale spots for clients experiencing financial hardship. If cost is a barrier, mention it during our initial consultation.</p></div>
-</div></div></section>
+</div></div><div class="wave" style="--c:#FFFFFF" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 
 <section id="faq" class="white"><div class="w two">
 <div><h2>F.A.Q.</h2><p>The questions clients most often ask before starting therapy.</p></div>
@@ -190,7 +204,7 @@ footer b{display:block;color:#fff;font:500 1.1rem var(--serif);margin-bottom:.3r
 <details><summary>What forms of payment do you accept?</summary><div class="a"><p>Credit and debit cards, processed securely through SimplePractice. Payment is due at the time of each session.</p></div></details>
 <details><summary>Do you offer a sliding scale?</summary><div class="a"><p>Yes, a limited number of spots for clients facing financial hardship. Bring it up in our initial consultation.</p></div></details>
 <details><summary>What is your cancellation policy?</summary><div class="a"><p>I require at least 24 hours’ notice to cancel or reschedule. Late cancellations or missed appointments are charged the full session fee, except in emergencies.</p></div></details>
-</div></div></section>
+</div></div><div class="wave" style="--c:#1F5F59" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 
 <section id="resources" class="green"><div class="w">
 <h2>Resources</h2>
@@ -217,7 +231,7 @@ footer b{display:block;color:#fff;font:500 1.1rem var(--serif);margin-bottom:.3r
 <button class="btn" type="submit">Send my request</button>
 <p class="disc">Please do not include sensitive personal or medical information in this form. If you are in crisis, please call 988.</p>
 </form>
-</div></section>
+</div><div class="wave" style="--c:#2E2E2E" aria-hidden="true"><svg viewBox="0 0 2880 48" preserveAspectRatio="none"><path d="M0 30C240 40 480 38 720 28S1200 20 1440 30C1680 40 1920 38 2160 28S2640 20 2880 30V48H0Z"/></svg></div></section>
 </main>
 
 <footer><div class="w">
@@ -235,6 +249,21 @@ e.preventDefault();var d=new FormData(this),
 b='Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nPhone: '+d.get('phone')+'\n\n'+d.get('msg');
 location.href='mailto:info@jeanebosch.com?subject='+encodeURIComponent('Consultation request')+'&body='+encodeURIComponent(b);
 });
+(function(){
+var h=document.querySelector('header');
+function sc(){h.classList.toggle('scrolled',window.scrollY>8)}
+sc();window.addEventListener('scroll',sc,{passive:true});
+var ids=['about','approach','how','rates','faq','resources','contact'],links={};
+document.querySelectorAll('nav a[href^="#"]').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+if('IntersectionObserver' in window){var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove('active')});if(links[e.target.id])links[e.target.id].classList.add('active')}})},{rootMargin:'-45% 0px -50% 0px'});
+ids.forEach(function(i){var el=document.getElementById(i);if(el)so.observe(el)})}
+
+if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var els=[].slice.call(document.querySelectorAll("section:not(.hero) h2, section:not(.hero) .w > p, .cols p, .grid > div, .steps > div, .three > .box, .two > div > p, details, .rcard, .rcards + .crisis, form")),cnt=new Map();
+els.forEach(function(el){var p=el.parentNode,i=cnt.get(p)||0;cnt.set(p,i+1);el.classList.add('rv');el.style.setProperty('--d',Math.min(i,5)*90+'ms')});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add('on');io.unobserve(el);setTimeout(function(){el.classList.remove('rv','on');el.style.removeProperty('--d')},1300)})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+els.forEach(function(el){io.observe(el)});
+})();
 </script>
 </body>
 </html>
